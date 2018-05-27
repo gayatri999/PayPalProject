@@ -14,8 +14,8 @@ public class LoginPage extends ProjectMethods{
 	
 	@FindBy(how=How.ID, using="country")
 	private WebElement eleCountry;
-	public LoginPage selectCountry() {
-		selectDropDownUsingText(eleCountry, " India");
+	public LoginPage selectCountry(String data) {
+		selectDropDownUsingText(eleCountry, data);
 		return this;
 	}
 	@FindBy(how=How.ID, using="email")

@@ -21,12 +21,12 @@ public class TC_001_PayPal extends ProjectMethods {
 	
 	
 	@Test(dataProvider="fetchData")
-	public void payPal(String email, String pwd, String repwd) {
+	public void payPal(String country,String email, String pwd, String repwd) {
 		new SignupPage()
 		.clickSignup()
 		.verifyAccount()
 		.clickNext()
-		.selectCountry()
+		.selectCountry(country)
 		.enterEmail(email)
 		.enterPassword(pwd)
         .enterRepassword(repwd)	
